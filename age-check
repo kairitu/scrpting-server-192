@@ -1,0 +1,49 @@
+#!/bin/bash
+
+# Description: This script checks age of the customer at a store
+
+# Author Jane Wawer
+
+# Date September 12th 2020
+
+clear
+
+echo "please enter your age..."
+
+	read AGE
+
+	if [ $AGE -le 10 ]
+
+	then 
+
+		echo "Do not purchase anything without a guardian or parent.."
+
+	elif [ $AGE -gt 10 ] && [ $AGE -le 21 ]
+
+	then
+		echo "Attempting to buy any alcoholic beverages or cigarettes will land you in jail"
+
+	elif [ $AGE -gt 21 ] && [ $AGE -lt 85 ]
+
+	then
+
+		echo "Please visit our back room for a tasting event"
+
+	elif [ $AGE -ge 85 ]
+
+	then
+		
+		echo "happy shopping, Do you need any assistance today (yes/no) ?"
+
+		read ANSW
+
+		if [ $ANSW == yes ]
+
+		then
+
+			echo "Please wait here some one with be with you shortly"
+		else
+
+			echo "Please drink responsibly, there is tasting in the back room, please check it out"
+		fi
+	fi
